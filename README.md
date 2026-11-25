@@ -1,5 +1,15 @@
 # remnate
 
-I’m researching how AI coding tools choose a workspace. If two Git worktrees contain the same file, how can you tell which copy an agent’s search tool actually read?
+I build small tools for debugging AI developer workflows. Each project below includes a local demo and the evidence behind its results.
 
-**WhichTree** is my current project idea for testing that behavior across tools.
+### Which checkout did the agent read?
+
+[WhichTree](https://github.com/remnate/whichtree) asks a filesystem tool for the same file before and after a Git worktree switch. The returned content identifies the checkout.
+
+### Which processes survived a reconnect?
+
+[MCP Exit Test](https://github.com/remnate/mcp-exit-test) follows a registered MCP test server and its child through reconnect and shutdown on Linux. It writes a JUnit result for CI.
+
+### Did a LoRA conversion change the weights that matter?
+
+[LoRA Witness](https://github.com/remnate/lora-witness) compares supported SDXL attention updates across Kohya and Diffusers files on CPU and points to the projection where they diverge.
